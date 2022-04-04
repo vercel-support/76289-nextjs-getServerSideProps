@@ -3,6 +3,16 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Chip from '../components/chip'
 
+// This gets called on every request
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`https://nextjs-time-api.vercel-support.app/api/time`)
+  const data = await res.json()
+
+  // Pass data to the page via props
+  return { props: { data } }
+}
+
 function Page({ data }) {
   console.log({data})
   return (
@@ -29,14 +39,6 @@ function Page({ data }) {
   )
 }
 
-// This gets called on every request
-export async function getServerSideProps() {
-  // Fetch data from external API
-  const res = await fetch(`https://nextjs-time-api.vercel-support.app/api/time`)
-  const data = await res.json()
 
-  // Pass data to the page via props
-  return { props: { data } }
-}
 
 export default Page
