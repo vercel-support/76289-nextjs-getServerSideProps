@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Chip from '../components/chip'
 
 function Page({ data }) {
   console.log({data})
@@ -8,7 +9,9 @@ function Page({ data }) {
     <div className={styles.container}>
       <main>
         HELLO {data.now}
+        <Chip text="I am Chip. Click Me"/>
       </main>
+      
 
       <footer className={styles.footer}>
         <a
