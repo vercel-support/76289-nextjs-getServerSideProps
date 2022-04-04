@@ -1,4 +1,6 @@
 import styles from '../styles/chip.module.css'
+
+// doing the following will break Next.js on Vercel (using getServerSideProps)
 import next from 'next'
 
 function select_chip() {
