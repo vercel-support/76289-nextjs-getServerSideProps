@@ -1,4 +1,5 @@
 import styles from '../styles/chip.module.css'
+import next from 'next'
 
 function select_chip() {
   console.log("You clicked a chip")

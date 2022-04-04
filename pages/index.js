@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import Chip from '../components/chip'
 
 // This gets called on every request
-export async function getServerSideProps() {
+export async function getStaticProps() {
   // Fetch data from external API
   const res = await fetch(`https://nextjs-time-api.vercel-support.app/api/time`)
   const data = await res.json()
